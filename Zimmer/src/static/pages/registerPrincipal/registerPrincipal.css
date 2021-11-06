@@ -54,7 +54,7 @@ html {
 
 .form input {
     margin: 20px 0px;
-    padding: 20px;
+    padding: 16px;
 }
 
 .form a {
@@ -90,8 +90,3 @@ html {
         transform: translateX(5%);
     }
 }
-
-
-
-
-
