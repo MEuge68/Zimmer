@@ -30,8 +30,8 @@ setInterval(async () => {
         cardData += `
             <div class="section_rooms_cardContainer_card">
                 <h3 class="section_rooms_cardContainer_card_id"> ${data[i].id} </h3>
-                <h4 class="sections_room_cardContainer_card_name"> ${data[i].name} </h4>
-                <div class="sections_rooms_cardContainer_card_states">
+                <h4 class="section_rooms_cardContainer_card_name"> ${data[i].name} </h4>
+                <div class="section_rooms_cardContainer_card_states">
                     <select>
                         <option value="sucia_desocupada">Sucia-Desocupada</option>
                         <option value="sucia_ocupada">Sucia-Ocupada</option>
@@ -47,7 +47,7 @@ setInterval(async () => {
 
 
 
-    cardContainer.innerHTML = ` ${cardData} `
+    cardContainer.innerHTML = `${cardData}`
 
     cardData = "";
 
@@ -72,9 +72,9 @@ toggleButton.addEventListener("click",() => {
     isActive = !isActive;
 
     if(isActive){
-        spanToggle.innerHTML = "<span> <  </span>"
+        spanToggle.innerHTML = "<span><</span>"
     }else{
-        spanToggle.innerHTML = "<span> >  </span>"
+        spanToggle.innerHTML = "<span>></span>"
     }
 })
 
