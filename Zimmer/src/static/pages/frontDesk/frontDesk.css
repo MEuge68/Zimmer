@@ -69,7 +69,62 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section_rooms_cardContainer_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: space-around;
+    border-radius: 10%;
+    border: 1px solid #151719;
+    margin: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section_rooms_cardContainer_card_id {
+    font-size: 40px;
+}
+
+
+.section_rooms_cardContainer_card_name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.section_rooms_cardContainer_card_states {
+    display: flex;
     justify-content: center;
+}
+
+
+.section_rooms_cardContainer_card_states select {
+    color: white;
+    width: 72%;
+    padding: 12px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    background-color: #0563af;
+}
+
+
+.habitacion__sucia {
+    background-color: red;
+}
+
+.habitacion__limpia {
+    background-color: green;
+}
+
+.habitacion__mantenimiento {
+    background-color: yellow;
 }
 
 
