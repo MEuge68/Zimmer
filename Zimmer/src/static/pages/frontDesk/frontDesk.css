@@ -19,6 +19,7 @@ header {
     background: #151719;
     left: -200px;
     transition: all 0.3s;
+    z-index: 1;
 }
 
 .header.active {
@@ -58,11 +59,34 @@ header {
     font-weight: bold;
 }
 
+body {
+    background: rgb(241,220,167);
+    background: radial-gradient(circle, rgba(241,220,167,0.8519782913165266) 50%, rgba(217,174,148,1) 100%);
+}
+
 .section_rooms {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.section_rooms_references{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    display: inline-block;
+}
+
+.section_rooms h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.section_rooms h2 {
+    font-size: 4rem;
+    text-align: center;
 }
 
 .section_rooms_cardContainer {
@@ -71,6 +95,8 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+
 
 .section_rooms_cardContainer_card {
     display: flex;
@@ -82,7 +108,94 @@ header {
     border: 1px solid #151719;
     margin: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s;
 }
+
+.section_rooms_cardContainer_card div textarea {
+    border-radius: 4px;
+    font-size: 14px;
+    border: 2px solid #000;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.section_rooms_cardContainer_card div textarea:focus {
+    border-color: #FFCB69;
+    box-shadow: 0 0 0 3px #292a21;
+    outline: 3px solid transparent;
+}
+
+.section_rooms_cardContainer_card:hover {
+    transform: translateY(-6px);
+}
+
+.section_rooms_cardContainer_card_lupa{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.section_rooms_cardContainer_card_lupa_hover{
+    fill: white;
+}
+
+.section_rooms_cardContainer_card_lupa_references{
+    position: absolute;
+    top: -35px;
+    background-color: #9B9B7A;
+    width: 100px;
+    right: 0px;
+}
+
+.section_rooms_cardContainer_card_lupa_references ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_rooms_cardContainer_card_lupa_references_show {
+    display: none;
+}
+
+ul div {
+    display: flex;
+    flex-direction: row;
+}
+
+ul div div {
+    transform: translateY(3px);
+}
+
+
+.section_rooms_cardContainer_card_lupa_references---limpia {
+    width: 10px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.section_rooms_cardContainer_card_lupa_references---sucia {
+    width: 10px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.section_rooms_cardContainer_card_lupa_references---mantenimiento {
+    width: 10px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+
+
+
 
 .section_rooms_cardContainer_card_id {
     font-size: 40px;
@@ -102,7 +215,7 @@ header {
 
 
 .section_rooms_cardContainer_card_states select {
-    color: white;
+    color: #292a21;
     width: 72%;
     padding: 12px;
     border: none;
@@ -111,20 +224,25 @@ header {
     -webkit-appearance: button;
     appearance: button;
     outline: none;
-    background-color: #0563af;
+    background-color: #f1dca7;
+    opacity: 0.8;
+    border: 1px solid #000;
 }
 
 
 .habitacion__sucia {
-    background-color: red;
+    background: rgb(231,56,29);
+    background: linear-gradient(121deg, rgba(231,56,29,0.7091211484593838) 28%, rgba(245,163,74,0.8519782913165266) 82%);
 }
 
 .habitacion__limpia {
-    background-color: green;
+    background: rgb(48,231,29);
+    background: linear-gradient(121deg, rgba(48,231,29,0.7091211484593838) 46%, rgba(221,245,74,0.8519782913165266) 96%);
 }
 
 .habitacion__mantenimiento {
-    background-color: yellow;
+    background: rgb(255,203,105);
+    background: linear-gradient(121deg, rgba(255,203,105,1) 17%, rgba(196,231,29,0.7091211484593838) 85%);
 }
 
 
