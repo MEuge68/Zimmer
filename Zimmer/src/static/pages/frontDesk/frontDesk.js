@@ -12,6 +12,14 @@ let cardData = "";
 console.log(cardContainer);
 
 
+function humanize(str) {
+    let i, frags = str.split('_');
+    for (i=0; i<frags.length; i++) {
+        frags[i] = frags[i].charAt(0).toUpperCase() + frags[i].slice(1);
+    }
+    return frags.join(' ');
+}
+
 
 
 
@@ -103,7 +111,9 @@ setInterval(async () => {
                         </div>
                     </ul>
                 </div>
-                <h3 class="section_rooms_cardContainer_card_id"> ${data[i].id} </h3>
+                <div class="section_rooms_cardContainer_card_idContainer">
+                    <h3 class="section_rooms_cardContainer_card_idContainer_id"> ${data[i].id} </h3>
+                </div>
                 <h4 class="section_rooms_cardContainer_card_name"> ${data[i].name} </h4>
                 <div class="section_rooms_cardContainer_card_states">
                 
@@ -113,12 +123,12 @@ setInterval(async () => {
 
         cardData += `
                     <select class="section_rooms_cardContainer_card_states_select ">
-                        <option value=${arrayEstadoSeleccionado}>${arrayEstadoSeleccionado}</option>
-                        <option value=${estadosCarta[0]}>${estadosCarta[0]}</option>
-                        <option value=${estadosCarta[1]}>${estadosCarta[1]}</option>
-                        <option value=${estadosCarta[2]}>${estadosCarta[2]}</option>
-                        <option value=${estadosCarta[3]}>${estadosCarta[3]}</option>
-                        <option value=${estadosCarta[4]}>${estadosCarta[4]}</option>
+                        <option value=${arrayEstadoSeleccionado}>${humanize(arrayEstadoSeleccionado)}</option>
+                        <option value=${estadosCarta[0]}>${humanize(estadosCarta[0])}</option>
+                        <option value=${estadosCarta[1]}>${humanize(estadosCarta[1])}</option>
+                        <option value=${estadosCarta[2]}>${humanize(estadosCarta[2])}</option>
+                        <option value=${estadosCarta[3]}>${humanize(estadosCarta[3])}</option>
+                        <option value=${estadosCarta[4]}>${humanize(estadosCarta[4])}</option>
                     </select>
                 </div>
                 <div>
