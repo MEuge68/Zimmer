@@ -44,6 +44,16 @@ header {
 }
 
 
+.header a {
+    text-decoration: none;
+}
+
+.header a:visited {
+    text-decoration: none;
+    color: rgba(230,230,230,0.9);
+}
+
+
 .header .toggle-btn {
     position: absolute;
     left: 210px;

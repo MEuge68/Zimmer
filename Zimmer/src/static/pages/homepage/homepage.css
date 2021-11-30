@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    font-size: 2.4rem;
+}
+
+body {
+    background: rgb(241,220,167);
+    background: radial-gradient(circle, rgba(241,220,167,0.8519782913165266) 50%, rgba(217,174,148,1) 100%);
+}
+
+.header {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #151719;
+    left: -200px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.header.active {
+    left: 0px;
+}
+
+.header ul li img {
+    width: 100px;
+    border-radius: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.header ul li{
+    color: rgba(230,230,230,0.9);
+    text-align: center;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+    padding: 15px 10px;
+    list-style: none;
+}
+
+
+.header a {
+    text-decoration: none;
+}
+
+.header a:visited {
+    text-decoration: none;
+    color: rgba(230,230,230,0.9);
+}
+
+
+.header .toggle-btn {
+    position: absolute;
+    left: 210px;
+    top: 40%;
+    cursor: pointer;
+}
+
+.header .toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
