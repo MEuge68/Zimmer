@@ -75,7 +75,52 @@ body {
     font-weight: bold;
 }
 
-h1 {
+
+.main__title{
     text-align: center;
+    font-size: 60px;
 }
 
+.main__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+
+.main__cards__card {
+    border: 2px solid #000;
+    box-shadow: 2px 1px 2px 2px hsla(0, 0%, 1%, 0.1);
+    width: 33%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.main__cards__card h1 {
+    text-align: center;
+    font-size: 42px;
+}
+
+.main__cards__card img {
+    width: 60px;
+}
+
+
+@media screen and (max-width: 700px){
+    .main__cards {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .main__cards__card {
+        width: 100%;
+    }
+}
